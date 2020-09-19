@@ -21,4 +21,8 @@ class ExampleReflex < ApplicationReflex
   #   end
   #
   # Learn more at: https://docs.stimulusreflex.com
+
+  def keydown(key)
+    puts "-----#{key}-----"
+  end
 end

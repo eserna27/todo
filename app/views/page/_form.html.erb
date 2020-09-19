@@ -1,0 +1,9 @@
+<%= form_for @message, html: { data: {reflex: "submit->MessageReflex#create",
+  controller: "message" }, class: "row justify-content-center" }  do |f| %>
+  <div class="col-9">
+    <%= f.text_field :text, class: "form-control", placeholder: "Nueva tarea", data: { target: "message.input" } %>
+  </div>
+  <div class="col-3">
+    <%= f.submit "Agregar", class: "btn btn-primary mb-3 btn-block" %>
+  </div>
+<% end %>

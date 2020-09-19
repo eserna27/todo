@@ -1,0 +1,8 @@
+<span>
+  <%= link_to "#", class: "float-left mr-3", data: { reflex: "click->MessageReflex#completed", id: message.id } do %>
+    <i class="far fa-square text-info"></i>
+  <% end %>
+  <p class="mb-0" data-reflex="click->MessageReflex#edit" data-id = "<%= message.id %>">
+    <%= message.text %>
+  </p>
+</span>

@@ -1,0 +1,13 @@
+<ul class="list-group">
+  <% @messages.each do |message| %>
+    <li class="list-group-item">
+      <% if @edit_id.to_i == message.id %>
+        <%= render "message_edit", message: message %>
+      <% elsif message.completed_at? %>
+        <%= render "message_completed", message: message %>
+      <% else %>
+        <%= render "message", message: message %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

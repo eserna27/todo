@@ -1,0 +1,9 @@
+<%= form_for @message_edit, html: { class: "row",
+  data: { reflex: "submit->MessageReflex#update", id: @message_edit.id } } do |f| %>
+  <div class="col-11">
+    <%= f.text_field :text, class: "form-control border border-white"%>
+  </div>
+  <div class="col-1" data-reflex="click->MessageReflex#cancelEdit">
+    <i class="fas fa-times text-danger mt-1"></i>
+  </div>
+<% end %>
